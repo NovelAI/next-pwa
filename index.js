@@ -119,6 +119,8 @@ module.exports = (nextConfig = {}) => ({
 
       config.plugins.push(
         new CleanWebpackPlugin({
+          dangerouslyAllowCleanPatternsOutsideProject: true,
+          dry: false,
           cleanOnceBeforeBuildPatterns: [
             path.join(_dest, 'workbox-*.js'),
             path.join(_dest, 'workbox-*.js.map'),
